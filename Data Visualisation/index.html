@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <style>
+  html, body{
+    align-items: center;
+    background-color:#ffffcc;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+  svg{
+    outline: 1px dashed #666;
+  }
+  svg *{
+    stroke: #000000;
+    stroke-width:15;
+  }
+  #bigpetal{
+    width: 100%;
+    height: auto;
+  }
+  </style> -->
+
+</head>
+
+<body>
+  <svg id="svg" width="100%" style="outline: 1px solid red" viewBox="0 0 600 600">
+    <!--
+    <g transform="translate(300,300) translate(-132.5 0) rotate(120 132.5 0)">
+      <path d="M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z" transform="translate(60 50) scale(0.5 0.5)" fill="#059B8F"/>
+      <path class="st0" d="M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z" fill="yellow" transform="translate(100 150) rotate(200) scale(0.3 0.6)"/>
+      <ellipse cx="100" cy="50" rx="10" ry="10" fill="red" transform="translate (26 10)"/>
+    </g>
+    <g transform="translate(300,300) translate(-132.5 0) rotate(180 132.5 0)">
+      <path d="M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z" transform="translate(60 50) scale(0.5 0.5)" fill="#059B8F"/>
+      <path class="st0" d="M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z" fill="yellow" transform="translate(100 150) rotate(200) scale(0.3 0.6)"/>
+      <ellipse cx="100" cy="50" rx="10" ry="10" fill="red" transform="translate (26 10)"/>
+    </g>
+    <g transform="translate(300,300) translate(-132.5 0) rotate(240 132.5 0)">
+      <path d="M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z" transform="translate(60 50) scale(0.5 0.5)" fill="#059B8F"/>
+      <path class="st0" d="M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z" fill="yellow" transform="translate(100 150) rotate(200) scale(0.3 0.6)"/>
+      <ellipse cx="100" cy="50" rx="10" ry="10" fill="red" transform="translate (26 10)"/>
+    </g>
+    <g transform="translate(300,300) translate(-132.5 0) rotate(300 132.5 0)">
+      <path d="M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z" transform="translate(60 50) scale(0.5 0.5)" fill="#059B8F"/>
+      <path class="st0" d="M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z" fill="yellow" transform="translate(100 150) rotate(200) scale(0.3 0.6)"/>
+      <ellipse cx="100" cy="50" rx="10" ry="10" fill="red" transform="translate (26 10)"/>
+    </g>
+    <g transform="translate(300,300) translate(-132.5 0) rotate(360 132.5 0)">
+      <path d="M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z" transform="translate(60 50) scale(0.5 0.5)" fill="#059B8F"/>
+      <path class="st0" d="M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z" fill="yellow" transform="translate(100 150) rotate(200) scale(0.3 0.6)"/>
+      <ellipse <ellipse cx="100" cy="50" rx="10" ry="10" fill="red" transform="translate (26 10)"/>
+    </g>
+  -->
+  </svg>
+</body>
+
+<script>
+india = [
+  {
+    "State": "Andhra Pradesh",
+    "Area": 162970,
+    "Population": 49386799,
+    "Density": 308,
+    "Capital": 10,
+    "Language": 1
+  },
+  {
+    "State": "Arunachal Pradesh",
+    "Area": 83743,
+    "Population": 1382611,
+    "Density": 17,
+    "Capital": 8,
+    "Language": 1
+  },
+  {
+    "State": "Assam",
+    "Area": 78438,
+    "Population": 31205576,
+    "Density": 397,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Bihar",
+    "Area": 94163,
+    "Population": 103804637,
+    "Density": 1102,
+    "Capital": 5,
+    "Language": 1
+  },
+  {
+    "State": "Chhattisgarh",
+    "Area": 135191,
+    "Population": 25545198,
+    "Density": 190,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Goa",
+    "Area": 3702,
+    "Population": 1458545,
+    "Density": 394,
+    "Capital": 6,
+    "Language": 5
+  },
+  {
+    "State": "Gujarat",
+    "Area": 196024,
+    "Population": 60383628,
+    "Density": 308,
+    "Capital": 11,
+    "Language": 1
+  },
+  {
+    "State": "Haryana",
+    "Area": 44212,
+    "Population": 25353081,
+    "Density": 573,
+    "Capital": 10,
+    "Language": 2
+  },
+  {
+    "State": "Himachal Pradesh",
+    "Area": 55673,
+    "Population": 6864602,
+    "Density": 123,
+    "Capital": 6,
+    "Language": 2
+  },
+  {
+    "State": "Jammu & Kasmir",
+    "Area": 222236,
+    "Population": 12541302,
+    "Density": 56,
+    "Capital": 9,
+    "Language": 6
+  },
+  {
+    "State": "Jharkhand",
+    "Area": 79714,
+    "Population": 32988134,
+    "Density": 414,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Karnataka",
+    "Area": 191791,
+    "Population": 61130704,
+    "Density": 320,
+    "Capital": 9,
+    "Language": 1
+  },
+  {
+    "State": "Kerala",
+    "Area": 38863,
+    "Population": 33387677,
+    "Density": 860,
+    "Capital": 18,
+    "Language": 2
+  },
+  {
+    "State": "Madhya Pradesh",
+    "Area": "308,252",
+    "Population": "72,626,809",
+    "Density": 236,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Maharasthra",
+    "Area": 307713,
+    "Population": 112372972,
+    "Density": 370,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Manipur",
+    "Area": 22327,
+    "Population": 2855794,
+    "Density": 130,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Meghalaya",
+    "Area": 22429,
+    "Population": 2964007,
+    "Density": 130,
+    "Capital": 8,
+    "Language": 1
+  },
+  {
+    "State": "Mizoram",
+    "Area": 21087,
+    "Population": 1091014,
+    "Density": 52,
+    "Capital": 6,
+    "Language": 3
+  },
+  {
+    "State": "Nagaland",
+    "Area": 16579,
+    "Population": 1980602,
+    "Density": 119,
+    "Capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Odisha",
+    "Area": 155707,
+    "Population": 41974218,
+    "Density": 270,
+    "Capital": 11,
+    "Language": 1
+  },
+  {
+    "State": "Punjab",
+    "Area": 50362,
+    "Population": 27704236,
+    "Density": 550,
+    "Capital": 10,
+    "Language": 1
+  },
+  {
+    "State": "Rajasthan",
+    "Area": 342239,
+    "Population": 68548437,
+    "Density": 200,
+    "Capital": 6,
+    "Language": 2
+  },
+  {
+    "State": "Sikkim",
+    "Area": "7,096",
+    "Population": "610,577",
+    "Density": 86,
+    "Capital": 7,
+    "Language": 12
+  },
+  {
+    "State": "Tamil Nadu",
+    "Area": 130060,
+    "Population": 72147030,
+    "Density": 550,
+    "Capital": 7,
+    "Language": 2
+  },
+  {
+    "State": "Telegana",
+    "Area": 112077,
+    "Population": 35193978,
+    "Density": 307,
+    "Capital": 9,
+    "Language": 2
+  },
+  {
+    "State": "Tripura",
+    "Area": 10491.69,
+    "Population": 3671032,
+    "Density": 350,
+    "Capital": 8,
+    "Language": 3
+  },
+  {
+    "State": "Uttarakhand",
+    "Area": 53483,
+    "Population": 10086292,
+    "Density": 189,
+    "Capital": 8,
+    "Language": 2
+  },
+  {
+    "State": "Uttar Pradesh",
+    "Area": 243290,
+    "Population": 199812341,
+    "Density": 820,
+    "Capital": 7,
+    "Language": 2
+  },
+  {
+    "State": "West Bengal",
+    "Area": 8875,
+    "Population": 91347736,
+    "Density": 1029,
+    "Capital": 7,
+    "Language": 12
+  }
+
+]
+
+var petals;
+
+function drawIcon(state) {
+
+  if (state.population <= 800000) {
+     petals = 6;
+  }
+  else if (state.population <= 10000000) {
+     petals = 8;
+  }
+  else if (state.population <= 25000000) {
+     petals = 10;
+  }
+  else if (state.population <= 50000000) {
+     petals = 12;
+  }
+    else if (state.population <= 100000000) {
+      petals = 14;
+    }
+    else if (state.population < 125000000) {
+      petals = 16;
+    }
+    else if (state.population < 150000000) {
+      petals = 18;
+    }
+    else if (state.population < 200000000) {
+      petals = 20;
+    }
+}
+
+  petal_inc = 360/petals;
+
+  for (var i=1; i<=petals; i++) {
+    var petal_group = document.createElementNS('http://www.w3.org/2000/svg','g');
+    petal_group.setAttribute('transform', 'translate(300,300) translate(-132.5 0) rotate(' + petal_inc*i + ' 132.5 0)');
+
+    var petal = document.createElementNS('http://www.w3.org/2000/svg','path');
+    petal.setAttribute('d', 'M132.36,0c297.7,236.7,0,427.1,0,427.1S-165.44,236.7,132.36,0Z');
+    petal.setAttribute('transform', 'translate(60 50) scale(0.5 0.5)');
+    petal.setAttribute('fill', '#059B8F');
+
+    petal_group.append(petal);
+    document.getElementById('svg').append(petal_group);
+
+  }
+
+  function drawIcon(state) {
+
+    if (state.density <= 17) {
+      petals = 2;
+    }
+    else if (state.density <= 150) {
+      petals = 4;
+    }
+    else if (state.density <= 300) {
+      petals = 5;
+    }
+    else if (state.density <= 350) {
+      petals = 6;
+    }
+      else if (state.density <= 500) {
+        petals = 7;
+      }
+      else if (state.density < 650) {
+        petals = 8;
+      }
+      else if (state.density < 700) {
+        petals = 9;
+      }
+      else if (state.density < 850) {
+        petals = 10;
+      }
+      else if (state.density < 1102) {
+        petals = 11;
+      }
+  }
+
+    petal_inc = 360/petals;
+
+    for (var i=1; i<=petals; i++) {
+      var petal_group = document.createElementNS('http://www.w3.org/2000/svg','g');
+      petal_group.setAttribute('transform', 'translate(300,300) translate(-132.5 0) rotate(' + petal_inc*i + ' 132.5 0)');
+
+      var petal = document.createElementNS('http://www.w3.org/2000/svg','path');
+      petal.setAttribute('d', 'M133.7,237.9c0,0-161.5-153.9-129.5-203.6c28.1-43.6,197.4-46.8,229.9-3.7C269.8,77.9,133.7,237.9,133.7,237.9z');
+      petal.setAttribute('transform','translate(100 150) rotate(200) scale(0.3 0.6)');
+      petal.setAttribute('fill', 'yellow');
+
+      petal_group.append(petal);
+      document.getElementById('svg').append(petal_group);
+
+    }
+
+drawIcon(india[1]);
+
+</script>
+</html>

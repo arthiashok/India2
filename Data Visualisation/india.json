@@ -1,0 +1,234 @@
+[
+  {
+    "State": "Andhra Pradesh",
+    "Area": 162970,
+    "Population": 49386799,
+    "Population Density": 308,
+    "Letters in capital": 10,
+    "Language": 1
+  },
+  {
+    "State": "Arunachal Pradesh",
+    "Area": 83743,
+    "Population": 1382611,
+    "Population Density": 17,
+    "Letters in capital": 8,
+    "Language": 1
+  },
+  {
+    "State": "Assam",
+    "Area": 78438,
+    "Population": 31205576,
+    "Population Density": 397,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Bihar",
+    "Area": 94163,
+    "Population": 103804637,
+    "Population Density": 1102,
+    "Letters in capital": 5,
+    "Language": 1
+  },
+  {
+    "State": "Chhattisgarh",
+    "Area": 135191,
+    "Population": 25545198,
+    "Population Density": 190,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Goa",
+    "Area": 3702,
+    "Population": 1458545,
+    "Population Density": 394,
+    "Letters in capital": 6,
+    "Language": 5
+  },
+  {
+    "State": "Gujarat",
+    "Area": 196024,
+    "Population": 60383628,
+    "Population Density": 308,
+    "Letters in capital": 11,
+    "Language": 1
+  },
+  {
+    "State": "Haryana",
+    "Area": 44212,
+    "Population": 25353081,
+    "Population Density": 573,
+    "Letters in capital": 10,
+    "Language": 2
+  },
+  {
+    "State": "Himachal Pradesh",
+    "Area": 55673,
+    "Population": 6864602,
+    "Population Density": 123,
+    "Letters in capital": 6,
+    "Language": 2
+  },
+  {
+    "State": "Jammu & Kasmir",
+    "Area": 222236,
+    "Population": 12541302,
+    "Population Density": 56,
+    "Letters in capital": 9,
+    "Language": 6
+  },
+  {
+    "State": "Jharkhand",
+    "Area": 79714,
+    "Population": 32988134,
+    "Population Density": 414,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Karnataka",
+    "Area": 191791,
+    "Population": 61130704,
+    "Population Density": 320,
+    "Letters in capital": 9,
+    "Language": 1
+  },
+  {
+    "State": "Kerala",
+    "Area": 38863,
+    "Population": 33387677,
+    "Population Density": 860,
+    "Letters in capital": 18,
+    "Language": 2
+  },
+  {
+    "State": "Madhya Pradesh",
+    "Area (km^2)": "308,252",
+    "Population": "72,626,809",
+    "Population Density (/km^2)": 236,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Maharasthra",
+    "Area (km^2)": 307713,
+    "Population": 112372972,
+    "Population Density": 370,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Manipur",
+    "Area (km^2)": 22327,
+    "Population": 2855794,
+    "Population Density": 130,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Meghalaya",
+    "Area": 22429,
+    "Population": 2964007,
+    "Population Density": 130,
+    "Letters in capital": 8,
+    "Language": 1
+  },
+  {
+    "State": "Mizoram",
+    "Area (km^2)": 21087,
+    "Population": 1091014,
+    "Population Density": 52,
+    "Letters in capital": 6,
+    "Language": 3
+  },
+  {
+    "State": "Nagaland",
+    "Area": 16579,
+    "Population": 1980602,
+    "Population Density": 119,
+    "Letters in capital": 6,
+    "Language": 1
+  },
+  {
+    "State": "Odisha",
+    "Area (km^2)": 155707,
+    "Population": 41974218,
+    "Population Density": 270,
+    "Letters in capital": 11,
+    "Language": 1
+  },
+  {
+    "State": "Punjab",
+    "Area": 50362,
+    "Population": 27704236,
+    "Population Density": 550,
+    "Letters in capital": 10,
+    "Language": 1
+  },
+  {
+    "State": "Rajasthan",
+    "Area": 342239,
+    "Population": 68548437,
+    "Population Density": 200,
+    "Letters in capital": 6,
+    "Language": 2
+  },
+  {
+    "State": "Sikkim",
+    "Area (km^2)": "7,096",
+    "Population": "610,577",
+    "Population Density (/km^2)": 86,
+    "Letters in capital": 7,
+    "Language": 12
+  },
+  {
+    "State": "Tamil Nadu",
+    "Area": 130060,
+    "Population": 72147030,
+    "Population Density": 550,
+    "Letters in capital": 7,
+    "Language": 2
+  },
+  {
+    "State": "Telegana",
+    "Area": 112077,
+    "Population": 35193978,
+    "Population Density": 307,
+    "Letters in capital": 9,
+    "Language": 2
+  },
+  {
+    "State": "Tripura",
+    "Area": 10491.69,
+    "Population": 3671032,
+    "Population Density": 350,
+    "Letters in capital": 8,
+    "Language": 3
+  },
+  {
+    "State": "Uttarakhand",
+    "Area": 53483,
+    "Population": 10086292,
+    "Population Density": 189,
+    "Letters in capital": 8,
+    "Language": 2
+  },
+  {
+    "State": "Uttar Pradesh",
+    "Area": 243290,
+    "Population": 199812341,
+    "Population Density": 820,
+    "Letters in capital": 7,
+    "Language": 2
+  },
+  {
+    "State": "West Bengal",
+    "Area": 8875,
+    "Population": 91347736,
+    "Population Density": 1029,
+    "Letters in capital": 7,
+    "Language": 12
+  }
+]
